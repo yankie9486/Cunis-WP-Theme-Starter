@@ -1,0 +1,147 @@
+
+.header {
+  @apply py-2 z-10 bg-gray-100;
+
+  @screen lg {
+    @apply py-6;
+  }
+
+  .container {
+    @apply flex justify-between items-center;
+  }
+}
+
+.screenreader-text {
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+
+  &:focus {
+    color: #fff;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    position: static;
+    margin: auto;
+  }
+}
+
+.banner {
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+}
+
+.bar {
+  @screen xl {
+    @apply w-full;
+    max-width: 1180px;
+  }
+}
+
+.checkmark-list {
+  @apply m-0;
+
+  li {
+    @apply flex items-center;
+
+    &:before {
+      // content: url("../../assets/images/check-mark.svg");
+      // @apply inline-flex w-9 h-9 mr-2;
+    }
+  }
+
+  &.bottom-line {
+    li {
+      @apply border-b-1 border-gray-200 mt-1 pb-1 mb-1;
+    }
+  }
+}
+/* purgecss start ignore */
+.checkmark-icon li {
+  &:before {
+    content: url("../../assets/images/check-mark.svg");
+    @apply inline-flex w-9 h-9 mr-2;
+  }
+}
+/* purgecss end ignore */
+[data-target="carousel"] {
+  @apply transition-all duration-75;
+}
+[data-target="carousel"].active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1.01);
+}
+
+.check {
+  stroke-dasharray: 130px 130px;
+  stroke-dashoffset: 130px;
+  -webkit-transition: stroke-dashoffset 4.1s linear 0s;
+  transition: stroke-dashoffset 500ms ease-in-out;
+}
+.check.mark {
+  stroke-dashoffset: 0px;
+}
+
+.disable-scrollbars {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
+}
+
+.to-top {
+  @apply fixed p-2 rounded-full transition-all duration-100 cursor-pointer z-50 text-primary-300 border-primary-300 border-2;
+  right: -3.5em;
+  bottom: 1.5em;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  &:hover {
+    @apply border-4;
+  }
+
+  &.show {
+    right: 1em;
+  }
+}
+
+.overlay {
+  @apply flex flex-wrap items-stretch justify-center;
+  &__wrapper {
+    @apply w-48 flex flex-col justify-center items-stretch relative overflow-hidden mr-4;
+
+    img {
+      @apply w-full h-auto;
+    }
+    .bg-overlay {
+      @apply bg-gray-900 opacity-0 absolute top-0 left-0 w-full h-full transition-opacity duration-150 rounded-4;
+    }
+    .title {
+      @apply absolute text-center left-0 -bottom-50 w-full opacity-0 transition-all duration-150 text-gray-100;
+      background-color: rbga(0,0,0,0.5);
+    }
+
+    &:hover {
+      .title {
+        @apply opacity-1 bottom-25 text-20;
+
+        &.lg {
+          @apply bottom-10;
+        }
+      }
+
+      .bg-overlay {
+        @apply opacity-75;
+      }
+    }
+
+    &:last-child {
+      @apply pr-0;
+    }
+  }
+}

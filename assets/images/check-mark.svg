@@ -1,0 +1,24 @@
+<svg width="36" height="36" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:10;">
+<style>
+.check {
+  stroke-dasharray: 130px 130px;
+  stroke-dashoffset: 130px;
+  -webkit-transition: stroke-dashoffset 4.1s linear 0s;
+  transition: stroke-dashoffset 500ms ease-in-out;
+}
+</style>
+	<g id="Artboard1" transform="matrix(0.997073,0,0,0.997073,0.435303,-1.22093)">
+		<rect x="-0.437" y="1.225" width="75.255" height="75.279" style="fill:none;"/>
+		<clipPath id="_clip1">
+			<rect x="-0.437" y="1.225" width="75.255" height="75.279"/>
+		</clipPath>
+		<g clip-path="url(#_clip1)">
+			<g transform="matrix(0,-1.00294,-1.00294,0,37.2901,7.08875)">
+				<circle cx="-32.513" cy="0" r="32.513" style="fill:none;stroke:rgb(35,96,144);stroke-width:5px;"/>
+			</g>
+			<g transform="matrix(1.00294,0,0,1.00294,24.3437,36.5555)">
+				<path class="checkmark" d="M0,6.266L10.701,16.82L25.816,-10.554" style="fill:none;fill-rule:nonzero;stroke:rgb(35,96,144);stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;"/>
+			</g>
+		</g>
+	</g>
+</svg>
