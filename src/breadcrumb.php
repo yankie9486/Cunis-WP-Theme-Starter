@@ -64,7 +64,13 @@ function cunis_get_breadcrumb() {
 	<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 		<a itemprop="item" href="<?php echo esc_url_raw( $category_link ); ?>" rel="nofollow" itemprop="url">
 			<span itemprop="name">
-				<?php echo esc_html( $category->name ); ?>
+			<?php
+					if(is_array($category)):
+						echo esc_html( $category[0]->name );
+					else:
+						echo esc_html( $category->name );
+					endif;
+				?>
 			</span>
 		</a>
 	</li>

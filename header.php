@@ -32,30 +32,24 @@
 
 			<div class="flex lg:flex-row justify-between container  padding w-full relative py-2">
 				<div class="w-full lg:w-1/2 flex justify-center items-center lg:justify-start">
-				
-					<?php 
+
+					<?php
 						if(get_theme_mod( 'custom_logo' )):
-							echo get_custom_logo(); 	
+							echo get_custom_logo();
 						else:
-							echo '<img src="https://via.placeholder.com/150x75.jpg?text=logo" />'; 
+							echo '<img src="https://via.placeholder.com/150x75.jpg?text=logo" />';
 						endif;?>
 					</div>
 				<div class="w-1/2 hidden justify-end order-last lg:flex" itemscope
 					itemtype="http://schema.org/LocalBusiness">
-					<a href="tel:3052509917" class="flex items-center header-contact-num flex-shrink mt-0 pr-8">
-						<svg class="inline-block text-primary-300" width="32" height="32" viewBox="0 0 24 24" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M3 5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H8.28C8.48979 3.00016 8.69422 3.0663 8.86436 3.18905C9.03449 3.3118 9.1617 3.48496 9.228 3.684L10.726 8.177C10.8019 8.40534 10.7929 8.65339 10.7007 8.87564C10.6085 9.0979 10.4393 9.27945 10.224 9.387L7.967 10.517C9.07332 12.9655 11.0345 14.9267 13.483 16.033L14.613 13.776C14.7205 13.5607 14.9021 13.3915 15.1244 13.2993C15.3466 13.2071 15.5947 13.1981 15.823 13.274L20.316 14.772C20.5152 14.8383 20.6885 14.9657 20.8112 15.136C20.934 15.3064 21.0001 15.511 21 15.721V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H18C9.716 21 3 14.284 3 6V5Z"
-								stroke="#204D8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-						</svg>
-						<span class="text-primary-300 text-24 font-bold"
-							itemprop="telephone"><?php echo esc_html( __( '(305)250-9917', 'cunis' ) ); ?></span>
+					<a href="tel:305803-3954" class="flex items-center header-contact-num flex-shrink mt-0 pr-8">
+						<span class="text-primary-500 text-24 font-bold"
+							itemprop="telephone"><?php echo esc_html( __( '(305)803-3954', 'cunis' ) ); ?></span>
 					</a>
 					<ul class="flex items-center list-none mt-0 ml-0">
 						<li class="pr-4">
 							<a href="https://www.facebook.com/Miami-Medicaid-Law-213619918981385/timeline"
-								class="text-primary-300 hover:text-gray-600" target="_BLANK">
+								class="text-primary-500 hover:text-gray-600" target="_BLANK">
 								<span class="sr-only"><?php echo esc_html__( 'Facebook', 'cunis' ); ?></span>
 								<svg width="30" height="30" viewBox="0 0 30 30" fill="none" class="fill-current"
 									xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +61,7 @@
 						</li>
 						<li class="pr-0">
 							<a href="https://www.linkedin.com/in/ana-veliz-7ba8b02b"
-								class="text-primary-300 hover:text-gray-600" target="_BLANK">
+								class="text-primary-500 hover:text-gray-600" target="_BLANK">
 								<span
 									class="sr-only text-gray-600"><?php echo esc_html__( 'Linkedin', 'cunis' ); ?></span>
 								<svg width="30" height="30" viewBox="0 0 30 30" class="fill-current" fill="none"
@@ -90,7 +84,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="bg-primary-300 w-full">
+			<div class="bg-primary-500 w-full">
 				<nav id="site-navigation" class="main-menu container order-2">
 					<button id="menu-toggle" class="hamburger hamburger--collapse z-50 lg:hidden"
 						aria-controls="primary-menu" aria-expanded="false" type="button" aria-label="Main Menu">
@@ -110,7 +104,7 @@
 					?>
 					<script>
 						var supportsTouch = (typeof Touch == "object");
-						if(supportsTouch){ 
+						if(supportsTouch){
 							document.addEventListener("touchstart", function() {}, false);
 						}
 					</script>
@@ -173,7 +167,7 @@
 					?>
 		<div class="w-full flex flex-col py-4 items-center justify-center  bg-cover bg-no-repeat bg-fixed relative z-0"
 			style="background-image:url(<?php echo esc_url( $cunis_url ); ?>);">
-			<div class="h-full w-full absolute left-0 top-0 bg-primary-300 opacity-75 z-10"></div>
+			<div class="h-full w-full absolute left-0 top-0 bg-primary-500 opacity-75 z-10"></div>
 			<div class="container flex flex-col md:flex-row justify-between z-20">
 
 

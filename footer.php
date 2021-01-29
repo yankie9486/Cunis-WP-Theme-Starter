@@ -12,7 +12,7 @@
 ?>
 
 </div><!-- #content -->
-<div class="w-full bg-primary-300 pt-16 pb-16 flex justify-center items-center">
+<div class="w-full bg-primary-500 pt-16 pb-16 flex justify-center items-center">
 	<div class="container flex flex-col lg:flex-row">
 		<div class="w-full lg:w-8/12 flex justify-center items-center">
 			<h2 class="text-primary-100 text-30 text-center lg:text-left">

@@ -61,7 +61,7 @@
   @apply text-gray-600 mb-8;
 
   p {
-    @apply mt-4 mb-8 leading-relaxed;
+    @apply mb-4 leading-relaxed;
   }
 
   .content-list {
@@ -147,7 +147,7 @@
 
 /*--------------------------------------------------------------
 ## Sidebar
---------------------------------------------------------------*/ 
+--------------------------------------------------------------*/
 
 aside {
   .widget {
@@ -210,7 +210,7 @@ aside {
     @apply bg-primary-400 text-white;
   }
 
-  
+
 }
 
 .searchform [type="submit"] {

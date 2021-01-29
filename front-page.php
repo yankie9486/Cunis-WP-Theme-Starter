@@ -20,13 +20,14 @@ get_header();
 	style="background-image:url(<?php echo esc_url( get_home_url() . '' ); ?>);">
 	<div class="w-full mx-auto flex flex-col h-full py-4 justify-end pb-8 items-center"></div>
 </div>
+
 <div class="w-full bg-gray-100 py-4">
 	<div class="flex justify-around flex-col lg:flex-row container z-20 relative">
 
-		<h2 class="text-primary-300 text-center mb-4 mr-4">
+		<h2 class="text-primary-500 text-center mb-4 mr-4">
 				<?php echo esc_html__( 'Call Us now', 'cunis' ); ?></h2>
-	
-		<div class="text-center flex justify-center items-center">				
+
+		<div class="text-center flex justify-center items-center">
 			<a class="button outline-dark max-w-auto button-md" href="<?php echo esc_url( get_home_url() . '/contact' ); ?>"><?php echo esc_html__( 'Schedule Your Consultation', 'cunis' ); ?></a>
 		</div>
 	</div>
@@ -35,17 +36,18 @@ get_header();
 <!--- End of banner -->
 
 <!--- Start of front page main-->
+<div class="bg-gray-900">
 <div class="container">
 	<main id="main">
 		<article class="flex flex-col md:flex-row relative py-8 lg:py-24">
 			<div class="w-full lg:w-5/12 flex justify-center items-center">
 				<div class="p-4" itemscope itemtype="http://schema.org/Person">
-					<!-- <img src="<?php echo esc_url( 'https://placeholder.com/500x400.jpg?text=Placholder+Image' ); ?>" -->
-						alt="Anna Veliz" class="mb-1" itemprop="image" />
+					<img src="<?php echo esc_url( 'https://blog.cunisinc.com/wp-content/uploads/2019/08/Giancarlo-Cunis.jpg' ); ?>"
+						alt="Placeholder" class="mb-1 border-4 rounded-4 rounded-full" itemprop="image" />
 					<div class="flex justify-around items-center">
-						<span itemprop="name"><?php echo esc_html__( 'Ana M. Veliz, P.A.', 'cunis' ); ?></span>
-						<a href="https://www.linkedin.com/in/ana-veliz-7ba8b02b"
-							class="text-primary-300 hover:text-gray-600" itemprop="url" target="_BLANK">
+						<span itemprop="name"><?php echo esc_html__( 'Giancarlo Cunis', 'cunis' ); ?></span>
+						<a href="https://www.linkedin.com/in/giancarlocunis"
+							class="text-primary-500 hover:text-gray-600" itemprop="url" target="_BLANK">
 							<span class="sr-only"><?php echo esc_html__( 'Linkedin', 'cunis' ); ?></span>
 							<svg width="20" height="20" viewBox="0 0 30 30" fill="none"
 								xmlns="http://www.w3.org/2000/svg" class="fill-current">
@@ -67,19 +69,16 @@ get_header();
 				</div>
 			</div>
 			<div class="w-full lg:w-7/12 flex flex-col justify-center items-center">
-				<h2 class="mb-10 text-30"><?php echo esc_html( 'A Personal Approach To The Law' ); ?></h2>
-				<p><?php echo esc_html( 'Our Spanish-speaking attorney, Ana M. Veliz, has more than 25 years of experience providing dedicated assistance to Miami families in these select areas of the law. We believe that the most effective legal representation involves direct and frequent communication between clients and their attorneys. That is why you can expect to have access to legal assistance when you need it at our firm.' ); ?>
+				<h2 class="mb-10 text-30 text-gray-300"><?php echo esc_html( 'Tailwind CSS Based WP Theme' ); ?></h2>
+				<p class="text-gray-400"><?php echo esc_html( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus egestas accumsan condimentum. Donec malesuada dolor eu quam ornare accumsan. Praesent ut orci quis justo tempor pulvinar. Vivamus posuere neque vel auctor imperdiet. Integer dictum imperdiet mattis. Fusce facilisis cursus mi sed fermentum. Mauris justo justo, dictum sit amet cursus ut, fringilla a neque. Proin risus urna, rhoncus ut mauris sed, dignissim ultricies neque. Suspendisse est ligula, finibus at odio quis, gravida ullamcorper nisl. Phasellus quis sagittis odio, ut sollicitudin nunc.' ); ?>
 				</p>
 
 			</div>
 		</article>
 	</main>
 </div>
+</div>
 <!--- End of front page main -->
-
-
-
-
 
 
 <!--- Start of Testimonals -->

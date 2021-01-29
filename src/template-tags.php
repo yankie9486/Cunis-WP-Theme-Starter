@@ -174,9 +174,9 @@ if ( ! function_exists( 'cunis_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</div><!-- .post-thumbnail -->
+			<figure class="post-thumbnail">
+				<?php the_post_thumbnail('full'); ?>
+			</figure ><!-- .post-thumbnail -->
 
 		<?php else : ?>
 
