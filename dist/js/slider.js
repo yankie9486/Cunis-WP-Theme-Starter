@@ -136,7 +136,7 @@ window.addEventListener("DOMContentLoaded", function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/ig/Projects/Clients/WordPress/wp-content/themes/Cunis-WP-Theme-Starter/assets/js/slider.js */"./assets/js/slider.js");
+module.exports = __webpack_require__(/*! /Users/yankie/Projects/Cunis-WP-Theme-Starter/assets/js/slider.js */"./assets/js/slider.js");
 
 
 /***/ })

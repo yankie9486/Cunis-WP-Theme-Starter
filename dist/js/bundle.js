@@ -105,13 +105,15 @@
 /***/ (function(module, exports) {
 
 var lastKnownScrollPosition = 0;
-var toTopBtn = document.getElementsByClassName("to-top"); // /**
+var toTopBtn = document.getElementsByClassName("to-top");
+
+// /**
 //  * On page scroll
 //  */
-
 window.addEventListener("scroll", function (e) {
-  lastKnownScrollPosition = window.scrollY; //show and hide scroll button
+  lastKnownScrollPosition = window.scrollY;
 
+  //show and hide scroll button
   if (lastKnownScrollPosition > window.outerHeight) {
     toTopBtn[0].classList.add("show");
   } else if (lastKnownScrollPosition < window.outerHeight) {
@@ -119,14 +121,13 @@ window.addEventListener("scroll", function (e) {
       toTopBtn[0].classList.remove("show");
     }
   }
-}); // /* Optional Javascript to close the radio button version by clicking it again */
+});
 
+// /* Optional Javascript to close the radio button version by clicking it again */
 var myRadios = document.getElementsByName("faq-tab");
-
 if (myRadios) {
   var setCheck;
   var x = 0;
-
   for (x = 0; x < myRadios.length; x++) {
     myRadios[x].onclick = function () {
       if (setCheck != this) {
@@ -137,21 +138,21 @@ if (myRadios) {
       }
     };
   }
-} // //scroll to top button click
+}
 
-
+// //scroll to top button click
 toTopBtn[0].addEventListener("click", function () {
   scrollToTop(500);
   menuBtn.focus();
-}); //scroll to top animation
+});
 
+//scroll to top animation
 function scrollToTop(duration) {
   // cancel if already on top
   if (document.scrollingElement.scrollTop === 0) return;
   var totalScrollDistance = document.scrollingElement.scrollTop;
   var scrollY = totalScrollDistance,
-      oldTimestamp = null;
-
+    oldTimestamp = null;
   function step(newTimestamp) {
     if (oldTimestamp !== null) {
       // if duration is 0 scrollY will be -Infinity
@@ -159,11 +160,9 @@ function scrollToTop(duration) {
       if (scrollY <= 0) return document.scrollingElement.scrollTop = 0;
       document.scrollingElement.scrollTop = scrollY;
     }
-
     oldTimestamp = newTimestamp;
     window.requestAnimationFrame(step);
   }
-
   window.requestAnimationFrame(step);
 }
 
@@ -185,28 +184,24 @@ function scrollToTop(duration) {
 (function () {
   var container, button, menu, links, i, len;
   container = document.getElementById("site-navigation");
-
   if (!container) {
     return;
   }
-
   button = container.getElementsByTagName("button")[0];
-
   if ("undefined" === typeof button) {
     return;
   }
+  menu = container.getElementsByTagName("ul")[0];
 
-  menu = container.getElementsByTagName("ul")[0]; // Hide menu toggle button if menu is empty and return early.
-
+  // Hide menu toggle button if menu is empty and return early.
   if ("undefined" === typeof menu) {
     button.style.display = "none";
     return;
   }
+  menu.setAttribute("aria-expanded", "false");
 
-  menu.setAttribute("aria-expanded", "false"); // Get all the link elements within the menu.
-
+  // Get all the link elements within the menu.
   links = menu.getElementsByClassName("menu-item-has-children");
-
   if (links.length > 0) {
     var firstItem = links[0];
     var lastItem = links[links.length - 1].childNodes[0];
@@ -215,7 +210,6 @@ function scrollToTop(duration) {
     var firstItem = links[0];
     var lastItem = links[links.length - 1].childNodes[0];
   }
-
   function close() {
     container.className = container.className.replace(" toggled", "");
     button.className = button.className.replace(" is-active", "");
@@ -223,7 +217,6 @@ function scrollToTop(duration) {
     button.setAttribute("aria-expanded", "false");
     menu.setAttribute("aria-expanded", "false");
   }
-
   function open() {
     container.className += " toggled";
     button.className += " is-active";
@@ -231,7 +224,6 @@ function scrollToTop(duration) {
     menu.setAttribute("aria-expanded", "true");
     menu.className = menu.className.replace(" close", "");
   }
-
   button.onclick = function () {
     if (-1 !== container.className.indexOf("toggled")) {
       close();
@@ -239,9 +231,7 @@ function scrollToTop(duration) {
       open();
     }
   };
-
   menu.addEventListener("keydown", trapTabKey);
-
   function trapTabKey(e) {
     if (e.keyCode === 9) {
       // Shift Tab
@@ -249,8 +239,8 @@ function scrollToTop(duration) {
         if (document.activeElement === firstItem) {
           e.preventDefault();
           lastItem.focus();
-        } // Tab
-
+        }
+        // Tab
       } else {
         if (document.activeElement === lastItem) {
           e.preventDefault();
@@ -261,38 +251,31 @@ function scrollToTop(duration) {
       close();
     }
   }
+
   /**
    * Toggles `focus` class to allow submenu access on tablets.
    */
-
-
   (function (container) {
     var touchStartFn,
-        i,
-        parentLink = container.querySelectorAll(".menu-item-has-children > a, .page_item_has_children > a");
-
+      i,
+      parentLink = container.querySelectorAll(".menu-item-has-children > a, .page_item_has_children > a");
     if ("ontouchstart" in window) {
       touchStartFn = function touchStartFn(e) {
         var menuItem = this.parentNode,
-            i;
-
+          i;
         if (!menuItem.classList.contains("focus")) {
           e.preventDefault();
-
           for (i = 0; i < menuItem.parentNode.children.length; ++i) {
             if (menuItem === menuItem.parentNode.children[i]) {
               continue;
             }
-
             menuItem.parentNode.children[i].classList.remove("focus");
           }
-
           menuItem.classList.add("focus");
         } else {
           menuItem.classList.remove("focus");
         }
       };
-
       for (i = 0; i < parentLink.length; ++i) {
         parentLink[i].addEventListener("touchstart", touchStartFn, false);
       }
@@ -309,9 +292,9 @@ function scrollToTop(duration) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/ig/Projects/Clients/WordPress/wp-content/themes/Cunis-WP-Theme-Starter/assets/js/app.js */"./assets/js/app.js");
-__webpack_require__(/*! /Users/ig/Projects/Clients/WordPress/wp-content/themes/Cunis-WP-Theme-Starter/assets/js/navigation.js */"./assets/js/navigation.js");
-module.exports = __webpack_require__(/*! /Users/ig/Projects/Clients/WordPress/wp-content/themes/Cunis-WP-Theme-Starter/assets/css/app.scss */"./assets/css/app.scss");
+__webpack_require__(/*! /Users/yankie/Projects/Cunis-WP-Theme-Starter/assets/js/app.js */"./assets/js/app.js");
+__webpack_require__(/*! /Users/yankie/Projects/Cunis-WP-Theme-Starter/assets/js/navigation.js */"./assets/js/navigation.js");
+module.exports = __webpack_require__(/*! /Users/yankie/Projects/Cunis-WP-Theme-Starter/assets/css/app.scss */"./assets/css/app.scss");
 
 
 /***/ })
