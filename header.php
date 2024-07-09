@@ -34,11 +34,12 @@
 				<div class="w-full lg:w-1/2 flex justify-center items-center lg:justify-start">
 
 					<?php
-						if(get_theme_mod( 'custom_logo' )):
-							echo get_custom_logo();
-						else:
+					if ( get_theme_mod( 'custom_logo' ) ) :
+						echo esc_html( get_custom_logo() );
+						else :
 							echo '<img src="https://via.placeholder.com/150x75.jpg?text=logo" />';
-						endif;?>
+						endif;
+						?>
 					</div>
 				<div class="w-1/2 hidden justify-end order-last lg:flex" itemscope
 					itemtype="http://schema.org/LocalBusiness">

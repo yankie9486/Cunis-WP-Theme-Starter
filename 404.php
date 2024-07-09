@@ -25,7 +25,7 @@ get_header();
 					get_search_form();
 					?>
 
-<p class="text-center"><?php echo sprintf( '%s <a href="%s">%s</a> %s <a href="%s">contact us</a>', esc_html__( 'Or you can return to our', 'cunis' ), esc_url( home_url() ), esc_html__( 'homepage', 'cunis' ), esc_html__( ', or ', 'cunis' ), esc_url( get_permalink( 26 ) ), esc_html__( 'contact us', 'cunis' ) ); ?></p>
+<p class="text-center"><?php printf( '%s <a href="%s">%s</a> %s <a href="%s">contact us</a>', esc_html__( 'Or you can return to our', 'cunis' ), esc_url( home_url() ), esc_html__( 'homepage', 'cunis' ), esc_html__( ', or ', 'cunis' ), esc_url( get_permalink( 26 ) ), esc_html__( 'contact us', 'cunis' ) ); ?></p>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 

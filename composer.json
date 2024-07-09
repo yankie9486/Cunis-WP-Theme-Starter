@@ -2,9 +2,18 @@
     "require": {
         "a7/autoload": "^2.1"
     },
+    "scripts": {
+		"php-unit-test": "phpcs -d memory_limit=1024M --ignore=*/vendor/** --standard=phpcs.xml ./**.php",
+		"php-unit-test-automation": "phpcs --standard=phpcs.xml --ignore=*/vendor/** --report-full=phpcs-log.txt ./**.php --warning-severity=0",
+        "php-test-fix": "phpcbf -d memory_limit=1024M --ignore=*/vendor/** --standard=phpcs.xml ./**.php"
+	},
     "require-dev": {
-        "squizlabs/php_codesniffer": "^3.5",
-        "wp-coding-standards/wpcs": "*",
-        "phpcompatibility/php-compatibility": "*"
+        "wp-coding-standards/wpcs": "^3.1",
+        "phpcompatibility/php-compatibility": "^9.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }

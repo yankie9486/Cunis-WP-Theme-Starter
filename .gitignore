@@ -1,1 +1,6 @@
 node_modules/
+vendor/
+phpcs-log.txt
+phpcs.xml
+
+.DS_Store

@@ -1,17 +1,17 @@
 <?php
 /**
- * The search form 
- *
+ * The search form
  *
  * @package cunis
  */
+
 ?>
 
 <form action="/" class="searchform flex relative" method="get">
 	<label for="search" class="hidden">Search For</label>
 	<input type="text" name="s" id="search"
 		class=" flex-shrink-0 border-2  rounded-4 border-gray-300 pr-8 font-light not-italic hover:shadow-none"
-		value="<?php the_search_query(); ?>" placeholder="<?php echo __( 'Search', 'cunis' ); ?>" />
+		value="<?php the_search_query(); ?>" placeholder="<?php echo esc_html_e( 'Search', 'cunis' ); ?>" />
 	<button type="submit">
 		<svg xmlns="http://www.w3.org/2000/svg" height="20px" version="1.1" viewBox="-1 0 136 136.21852" width="20px"
 			class="fill-current">
